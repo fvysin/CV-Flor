@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Portfolio Florencia Vysin</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="max-widthh">
+            <div class="logo">
+                <a href="#">Portfolio.</a>
+                
+            </div>
+            <ul class="menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre-mi">Sobre Mi</a></li>
+                <li><a href="#proyectos">Projectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul class="menu-mobile">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre-mi">Sobre Mi</a></li>
+                <li><a href="#proyectos">Projectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <h1 class="text-1">¡Hola!, mi nombre es</h1>
+            <h1 class="text-2">Florencia Vysin</h1>
+            <h1 class="text-3">Y soy <span>Frontend Developer</span></h1>
+            <div class="icons">
+                <a href="https://www.linkedin.com/in/florenciavysin" target="_blank" class="icon" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/fvysin" target="_blank" rel="noopener noreferrer" class="icon">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <br>
+            <a href="#" class="button">Descargar CV</a>
+        </div>
+        <div class="imagen-content">
+            <img class="img" src="./IMG_1710-removebg-preview-Photoroom.jpg" alt="">
+        </div>
+        <a href="#sobre-mi" class="flecha">
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
+    </section>
+
+    <script>
+        // Función para mostrar/ocultar el menú móvil
+        function toggleMenu() {
+            const menu = document.querySelector('.menu-mobile');
+            menu.classList.toggle('active');
+        }
+
+        function copyEmail() {
+            const email = "florvysin@gmail.com";
+            navigator.clipboard.writeText(email).then(() => {
+                // Mostrar el mensaje "Email Copied" en la página
+                const message = document.getElementById("copyMessage");
+                message.textContent = "Email Copied";
+                message.style.display = "block";
+                
+                // Ocultar el mensaje después de 2 segundos
+                setTimeout(() => {
+                    message.style.display = "none";
+                }, 2000);
+            }).catch(err => {
+                console.error("Error al copiar el correo: ", err);
+            });
+        }
+    </script>
+    <section class="sobre-mi" id="sobre-mi">
+        <h2 class="h2-sobre-mi">Sobre Mi</h2>
+        <div class="contenedor-info">
+            <div class="skills">
+                <div  class="skill-row">
+                    <i class="fa-brands fa-square-js"></i>
+                    <i class="fa-brands fa-git"></i>
+                    <i class="fa-brands fa-html5"></i>
+                    <i class="fa-brands fa-react"></i>
+                </div>
+                <div class="skill-row">
+                     <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-css3"></i>
+                    <i class="fa-brands fa-wordpress"></i>
+                    <i class="fa-brands fa-vuejs"></i>
+                </div>
+            </div>
+            <div class="info">
+                <h2 class="p-sobre-mi">Soy  desarrolladora Frontend autodidacta en React y una persona motivada, comprometida a ofrecer soluciones efectivas y oportunas. He trabajado con JavaScript, CSS, HTML, React Js, Vue, Wordpress, Github y ahora mismo estoy perfeccionandome en React Native. <br />Además, tengo un nivel C1 de inglés, lo que me permite comunicarme eficazmente en proyectos internacionales y colaborar con equipos de diferentes partes del mundo.
+                    <br>Me apasiona el aprendizaje continuo, lo que me impulsa a tomar cursos y adquirir constantemente nuevas habilidades. Mi creatividad, combinada con una fuerte capacidad para resolver problemas, garantiza la calidad y la eficiencia en cada proyecto que emprendo. <br>
+                    Mi objetivo es lograr una eficiencia del 100%, siempre con mucho esfuerzo y dedicación.</h2>
+                </div>
+            </div>
+            <h3 class="contactame">Contáctame! (Haz click para copiar) </h3>
+            <h3 class="mail">
+                <span class="copy-btn" onclick="copyEmail()">florvysin@gmail.com</span>
+            </h3>
+            <div id="copyMessage" style="display: none; color: #6fb4f0; font-weight: bold;">Email copiado</div>
+
+    </section>
+
+
+
+    <section class="projectos" id="proyectos">
+
+
+    </section>
+</body>
+</html>
