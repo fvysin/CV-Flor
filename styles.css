@@ -19,9 +19,10 @@
 section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
+    
 }
 .navbar{
-    background: crimson;
+    background: rgb(0, 0, 0);
     position: fixed;
     width: 100%;
     font-family: 'Ubuntu', sans-serif;
@@ -48,7 +49,7 @@ section{
 }
 .navbar .menu li a:hover{
     background:transparent;
-    color: black;
+    color: #6fb4f0;;
 }
 
 
@@ -61,7 +62,7 @@ section{
     position: absolute;
     top: 60px; /* Ajusta según la altura de tu navbar */
     left: 0;
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .navbar .menu-mobile li {
@@ -96,7 +97,15 @@ section{
 .header-text h1{
     background-color: black;
 }
-
+@media (max-width: 480px) {
+    .img-proyectos img {
+        width: 100%;
+        height: auto;
+    }
+    .menu-mobile li a {
+        font-size: 16px;
+    }
+}
 /* 
 !!!!!!!  CLAVE PARA HACER SECCIONES QUE OCUPEN TODA LA PANTALLA, Y UNA VEZ QUE BAJO SE CAMBIA A LA OTRA SECCION.  SOBRETODO AGREGAR EL HEIGHT !!!!!!   */
 .home {
@@ -106,23 +115,25 @@ section{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5rem 5%;
+    min-height: 100vh;
+    
       }
 
 .max-width {
+    max-width: 1200px;
     flex: 1;
-    max-width: 100%;
-    min-width: 0;
+    margin: auto 3rem;
 }
 
 .imagen-content .img {
-    width:300px;
-    margin-right: 7rem;
-    height: 300px;
+    width:350px;
+    margin-right: 9rem;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     animation: floatImage 4s ease-in-out infinite;
     flex: 1;
+
 }
 
 
@@ -130,17 +141,16 @@ section{
     margin-bottom: 1rem; /* Espaciado debajo de cada título */
 }
 .text-1 {
-    font-size: 27px;
+    font-size: 35px;
 }
 
 .text-2 {
-    font-size: 75px;
-    
-    font-weight: 600;
+    font-size: 80px;
+        font-weight: 600;
 }
 
 .text-3 {
-    font-size: 40px;
+    font-size: 50px;
    
 }
 
@@ -227,8 +237,6 @@ section{
         color: #6fb4f0; /* Cambio de color al pasar el mouse */
     }
     
-
-
 @media (max-width: 768px) {
         .navbar .menu {
             display: none; /* Ocultar el menú en pantallas pequeñas */
@@ -257,37 +265,49 @@ section{
         }
     
         .home {
-            padding: 2rem 5%;
+            width: 100%;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            
         }
         .text-1 {
             margin-top: 5rem; /* Espaciado debajo de cada título */
+        }
+        .text-2{
+            font-size: 45px;
+        }
+        .text-3{
+            font-size: 30px;
         }
         .imagen-content .img{
             width:200px;
             height:200px;
             margin-right: 0;
+            margin-top: 1.1rem;;
             justify-content: center;
             align-items: center;
+        }
+        .button{
+            font-size: 1rem;
         }
     }
 
 /* 
+
+
+
 !!!!!!!  CLAVE PARA HACER SECCIONES QUE OCUPEN TODA LA PANTALLA, Y UNA VEZ QUE BAJO SE CAMBIA A LA OTRA SECCION.  SOBRETODO AGREGAR EL HEIGHT !!!!!!   */
 .sobre-mi {
-    background-color: rgb(254, 254, 254);
-    color: rgb(0, 0, 0);
     font-family: 'Geist';
-    padding: 0 2rem;
-    align-items: center;
-    display: flex; /* Añadir display: flex */
+    padding: 0;
+    display: flex; 
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-    text-align: center; /* Centra el texto en todo el contenedor */
-    position: relative;
-   height: auto;
-   overflow: visible;
+    text-align: center; 
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    justify-content: center;
 }
       
 .contenedor-info{
@@ -296,48 +316,58 @@ section{
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
+    margin-top: 2rem;
+
 }
 
 .h2-sobre-mi{
-    font-size: 42px;
+    font-size: 55px;
+    font-family: 'Ubuntu', sans-serif;
    margin-bottom: 3rem;
-   margin-top: 2rem;
-    align-items: center;
+   margin-top: 5rem;
+    text-align: center;
+    background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
 }
-.h2-sobre-mi:hover{
-    transition:  background-color 0.3s ease;
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
     }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 .p-sobre-mi{
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin: 0 20rem 1rem 7rem;
-    font-weight: 250;
+    font-weight: 300;
     line-height: 1.8;
     text-align: left;
-    max-width: 100%;
-}
+    }
 
 .info{
-    height: 80%;
-    width: 80%;
-
+    width: 77%;
 }
 .skills {
     color: rgba(253, 52, 2, 0.805);
     font-size: 2.5rem;
     background: transparent;
     display: flex;
-   flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50%;
-    transition: 0.5s ease;
-    cursor: pointer;
-    gap: 30px;
-    margin:0 3rem 0 8rem;
+    gap: 20px;
+    flex-direction: column;
 
 }
 .skill-row {
@@ -355,18 +385,14 @@ section{
     transform: scale(1.1); /* Efecto de aumento al pasar el ratón */
 }
 .contactame{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
+
     margin:5rem 0 1.5rem 0;
     font-weight: 500;
-    
+    justify-content: center;
 }
 .mail{
-    font-size: 4rem;
+    font-size: 3rem;
 }
-
 
 
 /* Media query para móviles */
@@ -375,27 +401,50 @@ section{
         font-size: 1rem;
         justify-content: center;
         align-items: center;
+        margin-left: 1rem;
     }
     
     .sobre-mi {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        margin-left: 2rem;
+        text-align: center;
     }
     .p-sobre-mi {
         margin-top: 1rem; /* Espaciado debajo de cada título */
         font-size: 15px;
         width: 100%;
+        align-items: center;
+
+    }
+    .contactame{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    
+        
+    }
+    .mail{
+        font-size: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 1rem;
+    
     }
 }
 
 @media (max-width: 768px) {
-       .sobre-mi {
-        justify-content:center;
-        flex-direction: flex-start;
-        height: auto;
-        padding-bottom: 2rem;
-        width: 100%;
+    .sobre-mi {
+        align-items: center;
+         justify-content:center;
+         display: flex;
+         flex-direction: column;
+         height: auto;
+         text-align: center;
     }
     .p-sobre-mi {
     margin-top: 3rem;
@@ -404,17 +453,22 @@ section{
     }
     .skills{
         font-size: 2rem;
+        align-items: center;
+        justify-content:center;
+         display: flex;
+
+    }
+    .skill-row{
+        align-items: center;
+        justify-content:center;
+         display: flex;
+        gap: 10px;
     }
     .info{
         align-items: center;
         justify-content: center;
     }
-    .contenedor-info{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-    }
+ 
     .contactame{
     font-size: 1rem;
     margin-top:2rem ;
@@ -426,40 +480,158 @@ section{
 }
 
 
-@media (max-width:801px)  { 
-    .p-sobre-mi {
-    
-    width: 100%;
-    }
-    .sobre-mi {
-         align-items: center;
-         justify-content:center;
-         display: flex;
-         flex-direction: flex-start;
-         height: auto;
-     }
-     .skills{
-        font-size: 1rem;
-        display: flex;
-        justify-content: center;
+@media (max-width:900px)  { 
+    .contenedor-info {
+        flex-direction: column;
         align-items: center;
     }
+    .skills {
+        width: 100%;
+        justify-content: center;
     }
-    
-    
-@media (min-width: 800px) and (max-width: 1344px) {
+    .p-sobre-mi {
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+        
+    }
+    .contactame {
+        font-size: 1.2rem;
+        margin: 3rem 0 1rem 0;
+    }
+    .mail {
+        font-size: 2rem;
+    }
+}
+    @media (max-width:1134){
+        .sobre-mi {
+            align-items: center;
+            flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+
+        }
         .skills {
-            flex-direction: column; /* Los iconos y el texto se apilan en una columna */
-            font-size: 1rem; 
+            display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px; 
-            margin-left: 2rem; 
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+        
         }
-        .skills .icon {
-            margin-left: 1rem; /* Aplica margen a los iconos */
-        }
-        .h2-sobre-mi{
-            margin-top: 2rem;
+        .p-sobre-mi{
+            display: flex;
+            align-items: center;
+            text-align: left;
+            width: 100%;
         }
     }
+
+
+    /* PROYECTOS*/
+.proyectos {
+    flex-direction: column;
+    padding: 0 6rem;
+    font-family: 'Geist';
+    padding: 0 2rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+
+}
+
+.proyectos .titulo{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 55px;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+     align-items: center;
+     background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-size: 400% 400%;
+     animation: gradient 3s ease infinite;
+ }
+ 
+ @keyframes gradient {
+     0% {
+         background-position: 0% 50%;
+     }
+     50% {
+         background-position: 100% 50%;
+     }
+     100% {
+         background-position: 0% 50%;
+     }
+ }
+
+.div-proyectos {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que las imágenes no sobresalgan */
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 800px; /* Máximo ancho de los proyectos */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.div-proyectos .descripcion {
+    text-align: left; /* Alineación del texto a la izquierda */
+    color: #fff;
+    font-size: 1rem;
+    flex: 1; /* Ocupa todo el espacio restante */
+}
+
+.div-proyectos:hover {
+    transform: scale(1.05); /* Pequeño efecto al pasar el mouse */
+}
+
+.div-proyectos img {
+    width: 350px; /* Tamaño fijo para las imágenes */
+    height: 350px;
+    object-fit: cover; /* Evita que las imágenes se corten */
+    border-radius: 16px;
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan más allá del tamaño definido */
+    transition: all 0.3s ease;
+    
+
+}
+.div-proyectos:hover img{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.h2-proyectos{
+    font-size: 1.5rem;
+    margin: 0 0 0 2rem;
+    color: #000000;
+    font-weight: 250;
+}
+.p-proyectos{
+    color: #6fb4f0;
+    font-size: 1rem;
+    margin: 0 0 0 2rem;
+    padding: 6px;
+    letter-spacing: 0.1rem;
+}
+
+@media (max-width: 770px) {
+    .div-proyectos {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center;
+        text-align: center;
+    }
+
+    .div-proyectos img {
+        margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
+    }
+
+    .div-proyectos .descripcion {
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+}
