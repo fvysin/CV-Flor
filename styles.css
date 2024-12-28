@@ -16,11 +16,7 @@
 
 }
 
-section{
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
-    
-}
+
 .navbar{
     background: rgb(0, 0, 0);
     position: fixed;
@@ -115,15 +111,15 @@ section{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 100vh;
+   height: 850px;
+   padding: 40px;
     
       }
 
 .max-width {
-    max-width: 1200px;
+    width: 100%;
     flex: 1;
-    margin: auto 3rem;
-}
+    }
 
 .imagen-content .img {
     width:350px;
@@ -229,7 +225,7 @@ section{
         left: 50%;
         transform: translateX(-50%);
         font-size: 2rem;
-        color: #fff;
+        color: #000000;
         animation: bounce 1.5s infinite; /* Animación de la flecha */
         text-decoration: none;
     }
@@ -246,31 +242,39 @@ section{
             display: block; /* Mostrar el icono de hamburguesa */
         }
     
-     
-    
-        .home {
+          .home {
             flex-direction: column;
             text-align: center;
             padding: 2rem 2%;
         }
         .text-1 {
-            margin-top: 10rem; /* Espaciado debajo de cada título */
+            margin-top: 5rem; /* Espaciado debajo de cada título */
+        }
+        .text-1 {
+            margin-top: 5rem; /* Espaciado debajo de cada título */
+        }
+        .text-2{
+            font-size: 55px;
+        }
+        .text-3{
+            font-size: 35px;
+        }
+        .imagen-content .img{
+            width:300px;
+            height:300px;
+            margin-right: 0;
+            margin-top: 1.1rem;;
+            justify-content: center;
+            align-items: center;
         }
     }
     
     /* Media query para móviles */
-@media (max-width: 480px) {
+@media (max-width: 560px) {
         .navbar .logo a {
             font-size: 25px;
         }
-    
-        .home {
-            width: 100%;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            
-        }
+   
         .text-1 {
             margin-top: 5rem; /* Espaciado debajo de cada título */
         }
@@ -281,10 +285,8 @@ section{
             font-size: 30px;
         }
         .imagen-content .img{
-            width:200px;
-            height:200px;
-            margin-right: 0;
-            margin-top: 1.1rem;;
+            width:220px;
+            height:220px;
             justify-content: center;
             align-items: center;
         }
@@ -292,7 +294,6 @@ section{
             font-size: 1rem;
         }
     }
-
 /* 
 
 
@@ -300,32 +301,30 @@ section{
 !!!!!!!  CLAVE PARA HACER SECCIONES QUE OCUPEN TODA LA PANTALLA, Y UNA VEZ QUE BAJO SE CAMBIA A LA OTRA SECCION.  SOBRETODO AGREGAR EL HEIGHT !!!!!!   */
 .sobre-mi {
     font-family: 'Geist';
-    padding: 0;
+    padding: 40px;
     display: flex; 
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     text-align: center; 
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 100vh;
+    height: 100vh;
     justify-content: center;
+    width: 100%;
 }
       
 .contenedor-info{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     flex-wrap: wrap;
     margin-top: 2rem;
-
-}
+    }
 
 .h2-sobre-mi{
     font-size: 55px;
     font-family: 'Ubuntu', sans-serif;
-   margin-bottom: 3rem;
-   margin-top: 5rem;
+    margin-bottom: 5rem;
     text-align: center;
+    letter-spacing: 0.2rem;
     background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
     background-clip: text;
     -webkit-background-clip: text;
@@ -349,31 +348,34 @@ section{
 .p-sobre-mi{
     font-size: 20px;
     display: flex;
+    width: 950px;
     align-items: center;
     font-weight: 300;
     line-height: 1.8;
-    text-align: left;
+    text-align: right;
     }
 
 .info{
-    width: 77%;
+    width: 60%;
+    height: 100%;
 }
 .skills {
     color: rgba(253, 52, 2, 0.805);
     font-size: 2.5rem;
     background: transparent;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    align-items: right;
+    gap:35px;
     flex-direction: column;
+    width: 40%;
+    height: 100%;
 
 }
 .skill-row {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Espaciado entre los iconos */
+    gap: 30px; /* Espaciado entre los iconos */
 }
 
 .skill-row i {
@@ -435,6 +437,21 @@ section{
         margin-bottom: 1rem;
     
     }
+    .contacto{
+        align-items: center;
+         justify-content:center;
+         display: flex;
+         flex-direction: column;
+         height: auto;
+         text-align: center;
+    
+}
+.contenedor-row{
+    display: flex;
+    justify-content: center;
+      align-items: center;
+    flex-wrap: wrap
+ }
 }
 
 @media (max-width: 768px) {
@@ -478,8 +495,6 @@ section{
         font-size: 2.5rem;
     }
 }
-
-
 @media (max-width:900px)  { 
     .contenedor-info {
         flex-direction: column;
@@ -503,7 +518,7 @@ section{
         font-size: 2rem;
     }
 }
-    @media (max-width:1134){
+@media (max-width:1134){
         .sobre-mi {
             align-items: center;
             flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
@@ -525,33 +540,34 @@ section{
             width: 100%;
         }
     }
-
+  
 
     /* PROYECTOS*/
 .proyectos {
-    flex-direction: column;
-    padding: 0 6rem;
     font-family: 'Geist';
-    padding: 0 2rem;
-    align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     display: flex;
-    
+    flex-direction: column; /* Asegura que los proyectos estén en una columna */
+    text-align: center; 
+     width: 100%;
+    height: 80%;  
+    padding: 40px;
 
 }
-
-.proyectos .titulo{
+.titulo-proyecto{
     font-family: 'Ubuntu', sans-serif;
     font-size: 55px;
-    margin-bottom: 3rem;
-    margin-top: 2rem;
-     align-items: center;
+    margin-bottom: 5rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
      background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
      background-clip: text;
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      background-size: 400% 400%;
      animation: gradient 3s ease infinite;
+    
+    
  }
  
  @keyframes gradient {
@@ -566,22 +582,30 @@ section{
      }
  }
 
+ .img-proyectos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* Espacio entre elementos */
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+     } 
+
+
 .div-proyectos {
     display: flex;
-    text-align: center;
     align-items: center;
-    overflow: hidden; /* Asegura que las imágenes no sobresalgan */
-    padding: 2rem;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-    width: 100%;
-    max-width: 800px; /* Máximo ancho de los proyectos */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+     flex-direction: column;
+     border-radius: 16px;
+     width: 600px;
+    height: 700px;
     transition: transform 0.3s ease-in-out;
+    gap: 80px;
+ 
 }
 
 .div-proyectos .descripcion {
-    text-align: left; /* Alineación del texto a la izquierda */
+    text-align: center; /* Alineación del texto a la izquierda */
     color: #fff;
     font-size: 1rem;
     flex: 1; /* Ocupa todo el espacio restante */
@@ -592,25 +616,24 @@ section{
 }
 
 .div-proyectos img {
-    width: 350px; /* Tamaño fijo para las imágenes */
-    height: 350px;
-    object-fit: cover; /* Evita que las imágenes se corten */
+    width: 100%; /* Tamaño fijo para las imágenes */
+    height: 550px;
+    object-fit: cover;;
     border-radius: 16px;
     flex-shrink: 0; /* Evita que las imágenes se reduzcan más allá del tamaño definido */
     transition: all 0.3s ease;
-    
+    }
 
-}
 .div-proyectos:hover img{
-    transform: scale(1.1);
+    transform: scale(1.0.5);
     cursor: pointer;
 }
 
 .h2-proyectos{
     font-size: 1.5rem;
-    margin: 0 0 0 2rem;
+    margin: -3rem 0 0 2rem;
     color: #000000;
-    font-weight: 250;
+    font-weight: 400;
 }
 .p-proyectos{
     color: #6fb4f0;
@@ -620,18 +643,207 @@ section{
     letter-spacing: 0.1rem;
 }
 
-@media (max-width: 770px) {
-    .div-proyectos {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+.p-tecnologias{
+    color: rgb(205, 202, 202);
+    font-size: 0.8rem;
+    margin: 0 0 0 2rem;
+}
+
+
+@media (max-width:1134){
+  
+.proyectos{
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+}
+.titulo-proyecto {
+    font-size: 35px; 
+    margin-bottom: 3rem; 
+}
+
+.div-proyectos {
+    width: 400px; /* Ancho más pequeño para móviles */
+    height: 500px; /* Sin límite de ancho */
+    gap: 20px;
+}
+
+.div-proyectos img {
+    height: 300px; /* Ajusta la altura de las imágenes para dispositivos móviles */
+}
+
+.descripcion {
+    padding: 1rem; /* Asegura que haya algo de espacio dentro del contenedor de descripción */
+}
+
+.h2-proyectos {
+    font-size: 1.2rem; /* Reduce el tamaño del título de cada proyecto */
+}
+
+.p-proyectos, .p-tecnologias {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto en móviles */
+}
+}
+@media(max-width:725px){
+   
+    .proyectos{
         align-items: center;
+        justify-content:center;
+        display: flex;
+        flex-direction: column;
+        height: auto;
         text-align: center;
     }
-
-    .div-proyectos img {
-        margin-bottom: 1rem; /* Espacio entre la imagen y el texto */
-    }
-
-    .div-proyectos .descripcion {
-        text-align: center; /* Centra el texto en pantallas pequeñas */
-    }
+    .img-proyectos{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; 
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+             } 
+   
+    .contacto{
+            align-items: center;
+             justify-content:center;
+             display: flex;
+             flex-direction: column;
+             height: auto;
+             text-align: center;
+            }
+    .contenedor-row{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap
+     }
+    
 }
+@media(max-width:670px){
+    .proyectos{
+        align-items: center;
+        justify-content:center;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .img-proyectos{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; 
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        
+     } 
+     .contacto{
+        align-items: center;
+         justify-content:center;
+         display: flex;
+         flex-direction: column;
+         height: auto;
+         text-align: center;
+    
+}
+.contenedor-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
+}
+
+
+
+/* CONTACT */
+.contacto{
+    font-family: 'Geist';
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column; 
+    text-align: center; 
+    height: 80px;
+    padding: 40px;
+    height: auto;
+  
+   
+    
+}
+
+.titulo-contacto{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 55px;
+     text-align: center;
+    letter-spacing: 0.2rem;
+     background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-size: 400% 400%;
+     animation: gradient 3s ease infinite;
+    
+ }
+.getin{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    text-align: left;
+    letter-spacing: 0.2rem;
+    text-align: center;
+}
+.getin span{
+    color: red;
+}
+.contenedor-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem  6rem ;
+    flex-wrap: wrap
+ }
+
+.icono {
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+    padding: 6px;
+    display: inline-flex;
+    background: transparent;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    align-items: center;
+    border-radius: 50%;
+   
+}
+
+.icono1{
+    color: rgb(29, 45, 222);
+    border: .2rem solid rgb(29, 45, 222);
+
+}
+.icono2{
+    color: rgb(26, 162, 18);
+    border: .2rem solid rgb(26, 162, 18);
+}
+.icono3{
+    color: crimson;
+    border: .2rem solid crimson;
+}
+.h3-contacto{
+    margin: 0.5rem 0 0.5rem 0
+}
+
+.correo{
+    color:#6fb4f0;
+    letter-spacing: 0.1rem;
+}
+.h3-contacto{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
