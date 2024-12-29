@@ -112,7 +112,7 @@
     justify-content: space-between;
     align-items: center;
    height: 850px;
-   padding: 40px;
+   padding: 80px;
     
       }
 
@@ -276,7 +276,7 @@
         }
    
         .text-1 {
-            margin-top: 5rem; /* Espaciado debajo de cada título */
+            margin-top: 5rem; 
         }
         .text-2{
             font-size: 45px;
@@ -293,11 +293,15 @@
         .button{
             font-size: 1rem;
         }
+        .flecha {
+           display: none;
+        }
     }
+
+
+
+    
 /* 
-
-
-
 !!!!!!!  CLAVE PARA HACER SECCIONES QUE OCUPEN TODA LA PANTALLA, Y UNA VEZ QUE BAJO SE CAMBIA A LA OTRA SECCION.  SOBRETODO AGREGAR EL HEIGHT !!!!!!   */
 .sobre-mi {
     font-family: 'Geist';
@@ -305,8 +309,8 @@
     display: flex; 
     flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
     text-align: center; 
-    height: 100vh;
-    justify-content: center;
+    min-height: 100vh;
+    justify-content: flex-start;
     width: 100%;
 }
       
@@ -314,7 +318,8 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
+    height: auto;
     flex-wrap: wrap;
     margin-top: 2rem;
     }
@@ -322,7 +327,7 @@
 .h2-sobre-mi{
     font-size: 55px;
     font-family: 'Ubuntu', sans-serif;
-    margin-bottom: 5rem;
+    margin-top: 5rem;
     text-align: center;
     letter-spacing: 0.2rem;
     background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
@@ -348,19 +353,26 @@
 .p-sobre-mi{
     font-size: 20px;
     display: flex;
-    width: 950px;
+    width: 100%;
     align-items: center;
     font-weight: 300;
     line-height: 1.8;
     text-align: right;
+    padding-right: 90px;
     }
 
 .info{
-    width: 60%;
-    height: 100%;
+    width: 700px;
+    min-height: 100px;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    flex: 1;
+   
+
 }
 .skills {
-    color: rgba(253, 52, 2, 0.805);
+    color: crimson;
     font-size: 2.5rem;
     background: transparent;
     display: flex;
@@ -370,6 +382,7 @@
     flex-direction: column;
     width: 40%;
     height: 100%;
+    flex: 0 1 auto;
 
 }
 .skill-row {
@@ -400,33 +413,39 @@
 /* Media query para móviles */
 @media (max-width: 480px) {
     .skills{
-        font-size: 1rem;
+        font-size: 0.3rem;
         justify-content: center;
         align-items: center;
-        margin-left: 1rem;
     }
-    
-    .sobre-mi {
+    .contenedor-info{
+        display: flex;
         justify-content: center;
-        flex-direction: column;
         align-items: center;
-        margin-left: 2rem;
         text-align: center;
+
+    }
+    .info{
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-left: 1rem;
+     
+    }
+    .sobre-mi {
+        height: auto;
     }
     .p-sobre-mi {
-        margin-top: 1rem; /* Espaciado debajo de cada título */
-        font-size: 15px;
-        width: 100%;
-        align-items: center;
-
+      font-size: 2.5rem;
+     
     }
     .contactame{
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
-    
-        
+       
     }
     .mail{
         font-size: 4rem;
@@ -437,6 +456,9 @@
         margin-bottom: 1rem;
     
     }
+    .h2-sobre-mi{
+        font-size: 40px;
+            }
     .contacto{
         align-items: center;
          justify-content:center;
@@ -454,110 +476,119 @@
  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 766px) {
     .sobre-mi {
-        align-items: center;
-         justify-content:center;
-         display: flex;
-         flex-direction: column;
          height: auto;
-         text-align: center;
-    }
+             }
+    .info{
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 3rem;
+      }
     .p-sobre-mi {
     margin-top: 3rem;
     margin-bottom: 2rem;
-    font-size: 20px;
+    font-size: 15px;
     }
     .skills{
         font-size: 2rem;
-        align-items: center;
-        justify-content:center;
-         display: flex;
-
-    }
+          }
     .skill-row{
         align-items: center;
         justify-content:center;
          display: flex;
         gap: 10px;
     }
-    .info{
-        align-items: center;
-        justify-content: center;
-    }
- 
-    .contactame{
+      .contactame{
     font-size: 1rem;
-    margin-top:2rem ;
-    margin-bottom: 3rem; 
+  
     }
     .mail{
         font-size: 2.5rem;
     }
 }
 @media (max-width:900px)  { 
+    .sobre-mi {
+        height: auto;
+            }
     .contenedor-info {
         flex-direction: column;
+        display: flex;
         align-items: center;
+        justify-content: center;
+        text-align: center;
     }
+
+    .info{
+        height: 100%;
+        width: 100%;
+      }
     .skills {
         width: 100%;
         justify-content: center;
+        margin-bottom: 2rem;
+    
     }
     .p-sobre-mi {
         width: 100%;
-        margin-top: 1rem;
         text-align: center;
-        
+        justify-content: center;
     }
     .contactame {
         font-size: 1.2rem;
-        margin: 3rem 0 1rem 0;
+        margin: 2rem 0 1rem 0;
     }
     .mail {
         font-size: 2rem;
     }
 }
-@media (max-width:1134){
-        .sobre-mi {
-            align-items: center;
-            flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
 
-        }
-        .skills {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            width: 100%;
-        
-        }
+
+@media (max-width:1134){
+    .sobre-mi {
+         height: auto;
+         width: 100%;
+         padding: 40px 10px; /* Reducimos el padding para que no cause desbordamiento */
+         overflow-x: hidden;
+             }
         .p-sobre-mi{
             display: flex;
             align-items: center;
-            text-align: left;
             width: 100%;
         }
+        .contenedor-info{
+            flex-direction: column; /* Los elementos se apilarán verticalmente */
+            width: 100%;
+            height: auto;
+            overflow-x: hidden;
+        }
+        .info{
+            width: auto;
+            height: auto;
+            padding:20px;
+            margin-right: 3rem;
+          }
     }
   
 
     /* PROYECTOS*/
 .proyectos {
     font-family: 'Geist';
-    justify-content: flex-start;
+    justify-content: space-between;
     display: flex;
-    flex-direction: column; /* Asegura que los proyectos estén en una columna */
+    flex-direction: column;
     text-align: center; 
-     width: 100%;
-    height: 80%;  
-    padding: 40px;
+     min-width: 100px;
+    height: 100%;  
+    padding: 90px;
 
 }
 .titulo-proyecto{
     font-family: 'Ubuntu', sans-serif;
     font-size: 55px;
-    margin-bottom: 5rem;
     text-align: center;
     letter-spacing: 0.2rem;
      background: linear-gradient(-45deg, var(--color-light-blue), var(--color-light-purple), var(--color-light-blue), var(--color-light-purple));
@@ -583,25 +614,38 @@
  }
 
  .img-proyectos{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; /* Espacio entre elementos */
-    width: 100%;
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 40px;
+     flex-wrap: wrap;
+    
+  
+
      } 
 
 
 .div-proyectos {
-    display: flex;
-    align-items: center;
-     flex-direction: column;
-     border-radius: 16px;
-     width: 600px;
-    height: 700px;
+   flex: 0 0 auto;
+   width: 300px;
+   flex-direction: column;
+   overflow: hidden;
     transition: transform 0.3s ease-in-out;
-    gap: 80px;
- 
+    margin-left: 2rem; 
+    
+}
+
+
+.div-proyectos img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+   margin-bottom: 1rem;
+    
+}
+.imagen-p1, .imagen-p2, .imagen-p3{
+    object-position: left;
 }
 
 .div-proyectos .descripcion {
@@ -614,65 +658,65 @@
 .div-proyectos:hover {
     transform: scale(1.05); /* Pequeño efecto al pasar el mouse */
 }
-
-.div-proyectos img {
-    width: 100%; /* Tamaño fijo para las imágenes */
-    height: 550px;
-    object-fit: cover;;
-    border-radius: 16px;
-    flex-shrink: 0; /* Evita que las imágenes se reduzcan más allá del tamaño definido */
-    transition: all 0.3s ease;
-    }
-
 .div-proyectos:hover img{
     transform: scale(1.0.5);
     cursor: pointer;
 }
 
+
 .h2-proyectos{
     font-size: 1.5rem;
-    margin: -3rem 0 0 2rem;
     color: #000000;
     font-weight: 400;
 }
 .p-proyectos{
     color: #6fb4f0;
     font-size: 1rem;
-    margin: 0 0 0 2rem;
     padding: 6px;
     letter-spacing: 0.1rem;
+    justify-content: center;
+    text-align: center;
 }
 
 .p-tecnologias{
     color: rgb(205, 202, 202);
     font-size: 0.8rem;
-    margin: 0 0 0 2rem;
+  justify-content: center;
+  text-align: center;
 }
 
 
-@media (max-width:1134){
+@media (max-width:1134px){
   
 .proyectos{
-    align-items: center;
     justify-content:center;
-    display: flex;
-    flex-direction: column;
-    height: auto;
+    padding: 40px;
     text-align: center;
-}
-.titulo-proyecto {
-    font-size: 35px; 
-    margin-bottom: 3rem; 
+  
 }
 
 .div-proyectos {
-    width: 400px; /* Ancho más pequeño para móviles */
-    height: 500px; /* Sin límite de ancho */
+    flex: 0 0 auto;
+    width: auto; 
+    height: auto; /* de ancho */
     gap: 20px;
+
 }
+.img-proyectos{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem; /* Espaciado entre los proyectos */
+    flex-wrap: wrap;
+    scroll-behavior: unset;
+
+}
+
+  
 
 .div-proyectos img {
     height: 300px; /* Ajusta la altura de las imágenes para dispositivos móviles */
+    object-fit: cover;
 }
 
 .descripcion {
@@ -709,17 +753,12 @@
     .contacto{
             align-items: center;
              justify-content:center;
-             display: flex;
-             flex-direction: column;
-             height: auto;
              text-align: center;
             }
     .contenedor-row{
         display: flex;
-        justify-content: center;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap
+        flex-wrap: wrap;
+        width: auto;
      }
     
 }
@@ -735,12 +774,25 @@
     .img-proyectos{
         display: flex;
         flex-direction: column;
-        gap: 2rem; 
-        width: 100%;
+          width: 90%;
         justify-items: center;
         align-items: center;
+        text-align: center;
         
      } 
+     .div-proyectos {
+  
+        display: flex;
+       margin-right: 1.5rem;
+       padding: 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+     }
+     .descripcion{
+        margin-top: -1rem;
+     }
+   
      .contacto{
         align-items: center;
          justify-content:center;
@@ -753,9 +805,14 @@
 .contenedor-row{
     display: flex;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
-    text-align: center;
+    flex-wrap: wrap
    }
+   .titulo-proyecto{
+    font-size: 40px;
+   }
+
 }
 
 
@@ -763,16 +820,14 @@
 /* CONTACT */
 .contacto{
     font-family: 'Geist';
-    justify-content: space-between;
     display: flex;
     flex-direction: column; 
-    text-align: center; 
-    height: 80px;
+    height: 90%;
     padding: 40px;
-    height: auto;
-  
-   
-    
+    width: 100%;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
 }
 
 .titulo-contacto{
@@ -794,16 +849,20 @@
     text-align: left;
     letter-spacing: 0.2rem;
     text-align: center;
+    margin-bottom: 5rem;
 }
 .getin span{
     color: red;
 }
 .contenedor-row{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     align-items: center;
-    margin: 5rem  6rem ;
-    flex-wrap: wrap
+    width: 100%;
+    gap: 5rem;
+    height: auto;
+    padding-bottom: 70px;
  }
 
 .icono {
@@ -845,5 +904,23 @@
     font-size: 20px;
     font-weight: 300;
 }
+
+
+@media(max-width: 480px){
+    .contacto{
+height: auto;
+
+    }
+    .titulo-contacto{
+       font-size: 40px;
+     
+    }
+    .getin{
+        font-size: 20px;
+    }
+    .contenedor-row{
+        margin-top: 2rem;
+}}
+
 
 
